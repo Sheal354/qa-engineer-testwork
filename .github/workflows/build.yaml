@@ -24,7 +24,7 @@ jobs:
         run: mvn clean test -Pci
 
       - name: Publish Allure report
-        uses: andrcuns/allure-publish-action@v2
+        uses: andrcuns/allure-publish-action@v2.10.0
         if: always()
         env:
           GITHUB_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
