@@ -18,7 +18,17 @@
         <allure-testng.version>2.35.4</allure-testng.version>
         <aspectj.version>1.9.25.1</aspectj.version>
         <lombok.version>1.18.46</lombok.version>
+        <selenoid.url></selenoid.url>
     </properties>
+
+    <profiles>
+        <profile>
+            <id>ci</id>
+            <properties>
+                <selenoid.url>http://localhost:4444/wd/hub</selenoid.url>
+            </properties>
+        </profile>
+    </profiles>
 
     <dependencies>
         <dependency>
@@ -87,6 +97,9 @@
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
+                    <systemPropertyVariables>
+                        <selenoid.url>${selenoid.url}</selenoid.url>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
 
