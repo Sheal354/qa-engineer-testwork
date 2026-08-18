@@ -50,5 +50,8 @@ public class UIComponentsTests extends BaseTest{
         // Проверяем переход на новую страницу
         Assert.assertTrue(ElementUtils.isTitleCorrect("Главная страница"),
                 "Некорректный заголовок страницы!");
+
+        // Чистим куки, для успешной работы последующих тестов
+        Selenide.clearBrowserCookies();
     }
 }
