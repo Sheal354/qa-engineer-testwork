@@ -11,6 +11,7 @@ public class BaseTest {
     @BeforeClass
     public void initBeforeClass() {
         Configuration.baseUrl = "https://qa.copy.mirapolis.ru/mira/";
+        Configuration.timeout = 10000;
         String selenoidUrl = System.getProperty("selenoid.url");
         if (selenoidUrl != null && !selenoidUrl.isEmpty()) {
             Configuration.remote = selenoidUrl;
