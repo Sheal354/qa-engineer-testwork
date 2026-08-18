@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Aug 18 17:57:39 UTC 2026","Tue Aug 18 17:57:42 UTC 2026","2729","Surefire suite","Surefire test","com.example.tests.AuthTests","com.example.tests.AuthTests","validAuthTest","Valid Auth Test",""
+"passed","Tue Aug 18 17:57:34 UTC 2026","Tue Aug 18 17:57:37 UTC 2026","2767","Surefire suite","Surefire test","com.example.tests.AuthTests","com.example.tests.AuthTests","invalidAuthTest","Invalid Auth Test",""
+"passed","Tue Aug 18 17:57:37 UTC 2026","Tue Aug 18 17:57:39 UTC 2026","1627","Surefire suite","Surefire test","com.example.tests.AuthTests","com.example.tests.AuthTests","invalidAuthTest","Invalid Auth Test",""
