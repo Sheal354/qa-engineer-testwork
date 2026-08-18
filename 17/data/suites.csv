@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","156","Show Password Test","Surefire suite","2026-08-18","passed","2026-08-18","com.example.tests.UIComponentsTests","Surefire test","com.example.tests.UIComponentsTests","showPasswordTest"
+"","1353","Invalid Auth Test","Surefire suite","2026-08-18","passed","2026-08-18","com.example.tests.AuthTests","Surefire test","com.example.tests.AuthTests","invalidAuthTest"
+"","2853","Invalid Auth Test","Surefire suite","2026-08-18","passed","2026-08-18","com.example.tests.AuthTests","Surefire test","com.example.tests.AuthTests","invalidAuthTest"
+"","9581","Cookies Test","Surefire suite","2026-08-18","passed","2026-08-18","com.example.tests.CookiesTests","Surefire test","com.example.tests.CookiesTests","cookiesTest"
+"","4292","Keyboard Test","Surefire suite","2026-08-18","passed","2026-08-18","com.example.tests.UIComponentsTests","Surefire test","com.example.tests.UIComponentsTests","keyboardTest"
+"","2629","Valid Auth Test","Surefire suite","2026-08-18","passed","2026-08-18","com.example.tests.AuthTests","Surefire test","com.example.tests.AuthTests","validAuthTest"
