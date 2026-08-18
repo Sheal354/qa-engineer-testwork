@@ -3,8 +3,7 @@ package com.example.pages;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
-import static com.codeborne.selenide.Condition.cssClass;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 
 /** Класс страницы авторизации**/
@@ -58,6 +57,12 @@ public class AuthPage {
         return this;
     }
 
+    @Step("Нажатие на поле для ввода логина")
+    public AuthPage loginInputClick() {
+        loginInput.shouldBe(visible).click();
+        return this;
+    }
+
     @Step("Проверка показа формы авторизации")
     public boolean isAuthFormShown() {
         return authForm.is(visible);
@@ -65,4 +70,10 @@ public class AuthPage {
 
     @Step("Проверка перехода формы в невалидный вид")
     public boolean isFormInvalid() {return authForm.is(cssClass("invalid"));}
+
+    @Step("Проверка перехода поля пароля в открытый вид")
+    public boolean isPasswordShown() {return passwordInput.is(type("text"));}
+
+    @Step("Проверка фокуса на поле для ввода пароля")
+    public boolean isPasswordFocused() {return passwordInput.is(focused);}
 }
