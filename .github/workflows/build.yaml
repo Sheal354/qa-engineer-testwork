@@ -31,4 +31,3 @@ jobs:
         with:
           storageType: gh-pages
           resultsGlob: "allure-results"
-          ghPagesBranch: gh-pages
