@@ -16,7 +16,7 @@ public class BaseTest {
         if (selenoidUrl != null && !selenoidUrl.isEmpty()) {
             Configuration.remote = selenoidUrl;
         }
-//        Configuration.headless = true;
+        Configuration.headless = true;
     }
 
     @AfterClass(alwaysRun = true)

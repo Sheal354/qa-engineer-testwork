@@ -6,6 +6,8 @@ import com.example.helpers.DataProviderHelper;
 import com.example.helpers.ElementUtils;
 import com.example.pages.AuthPage;
 import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 import org.openqa.selenium.Cookie;
 import org.testng.Assert;
@@ -27,6 +29,7 @@ public class CookiesTests extends BaseTest{
     }
 
     @Story("Проверка обработки и сохранения сессии")
+    @Severity(SeverityLevel.CRITICAL)
     @Test(dataProvider = "validAuthData", dataProviderClass = DataProviderHelper.class,
             description = "Cookies Test")
     public void cookiesTest(String login, String password) {

@@ -5,6 +5,8 @@ import com.example.helpers.DataProviderHelper;
 import com.example.helpers.ElementUtils;
 import com.example.pages.AuthPage;
 import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -24,6 +26,7 @@ public class AuthTests extends BaseTest{
     }
 
     @Story("Проверка корректности обработки неверных данных")
+    @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "invalidAuthData", dataProviderClass = DataProviderHelper.class,
             description = "Invalid Auth Test")
     public void invalidAuthTest(String login, String password) {
@@ -45,6 +48,7 @@ public class AuthTests extends BaseTest{
     }
 
     @Story("Проверка корректного входа в систему")
+    @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "validAuthData", dataProviderClass = DataProviderHelper.class,
             description = "Valid Auth Test")
     public void validAuthTest(String login, String password) {
@@ -60,5 +64,4 @@ public class AuthTests extends BaseTest{
         // Чистим куки, для успешной работы последующих тестов
         Selenide.clearBrowserCookies();
     }
-
 }

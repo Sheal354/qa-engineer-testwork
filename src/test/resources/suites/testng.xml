@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Auth Form Autotests" verbose="1" parallel="tests" thread-count="4">
+
+    <test name="Auth Tests">
+        <classes>
+            <class name="com.example.tests.AuthTests"/>
+        </classes>
+    </test>
+
+    <test name="UI Components Tests">
+        <classes>
+            <class name="com.example.tests.UIComponentsTests"/>
+        </classes>
+    </test>
+
+    <test name="Forgot Password Tests">
+        <classes>
+            <class name="com.example.tests.ForgotPasswordTests"/>
+        </classes>
+    </test>
+
+    <test name="Cookies Tests">
+        <classes>
+            <class name="com.example.tests.CookiesTests"/>
+        </classes>
+    </test>
+</suite>

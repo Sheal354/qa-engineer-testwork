@@ -3,7 +3,10 @@ package com.example.pages;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.cssClass;
+import static com.codeborne.selenide.Condition.focused;
+import static com.codeborne.selenide.Condition.type;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 /** Класс страницы авторизации**/
@@ -52,9 +55,9 @@ public class AuthPage {
     }
 
     @Step("Нажатие на переход к восстановлению пароля")
-    public AuthPage forgotPasswordLinkClick() {
+    public ForgotPasswordPage forgotPasswordLinkClick() {
         forgotPasswordLink.shouldBe(visible).click();
-        return this;
+        return new ForgotPasswordPage();
     }
 
     @Step("Нажатие на поле для ввода логина")

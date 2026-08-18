@@ -17,7 +17,6 @@
         <slf4j.version>2.0.18</slf4j.version>
         <allure-testng.version>2.35.4</allure-testng.version>
         <aspectj.version>1.9.25.1</aspectj.version>
-        <lombok.version>1.18.46</lombok.version>
         <selenoid.url></selenoid.url>
     </properties>
 
@@ -69,12 +68,6 @@
             <artifactId>aspectjweaver</artifactId>
             <version>${aspectj.version}</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-        </dependency>
     </dependencies>
 
     <build>
@@ -100,6 +93,9 @@
                     <systemPropertyVariables>
                         <selenoid.url>${selenoid.url}</selenoid.url>
                     </systemPropertyVariables>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>src/test/resources/suites/testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
                 </configuration>
             </plugin>
 
@@ -110,7 +106,4 @@
             </plugin>
         </plugins>
     </build>
-
-
-
 </project>

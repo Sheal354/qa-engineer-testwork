@@ -4,6 +4,8 @@ import com.codeborne.selenide.Selenide;
 import com.example.helpers.ElementUtils;
 import com.example.pages.AuthPage;
 import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
@@ -23,6 +25,7 @@ public class UIComponentsTests extends BaseTest{
     }
 
     @Story("Проверка работы скрытого режима поля для ввода пароля")
+    @Severity(SeverityLevel.NORMAL)
     @Test(description = "Show Password Test")
     public void showPasswordTest() {
         // Вводим данные, нажимаем кнопку показа пароля
@@ -34,6 +37,7 @@ public class UIComponentsTests extends BaseTest{
     }
 
     @Story("Тестирование клавиатурной доступности")
+    @Severity(SeverityLevel.NORMAL)
     @Test(description = "Keyboard Test")
     public void keyboardTest() {
         // Нажимаем на поле для ввода логина
